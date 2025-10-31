@@ -1,0 +1,76 @@
+{
+  "services": {
+    "Z_SALES": {
+      "name": "Z_SALES",
+      "base_path": "Z_SALES_SRV",
+      "entities": {
+        "SalesOrderSet": {
+          "name": "SalesOrderSet",
+          "path": "SalesOrderSet",
+          "key_fields": [
+            "SalesOrderId"
+          ],
+          "fields": [
+            "SalesOrderId",
+            "Customer",
+            "Amount",
+            "Currency",
+            "CreatedOn"
+          ]
+        },
+        "SalesItemSet": {
+          "name": "SalesItemSet",
+          "path": "SalesItemSet",
+          "key_fields": [
+            "SalesOrderId",
+            "ItemNo"
+          ],
+          "fields": [
+            "SalesOrderId",
+            "ItemNo",
+            "Material",
+            "Qty",
+            "NetPrice",
+            "Currency"
+          ]
+        }
+      }
+    },
+    "Z_MM_PURCHASE": {
+      "name": "Z_MM_PURCHASE",
+      "base_path": "Z_MM_PURCH_SRV",
+      "entities": {
+        "POHeaderSet": {
+          "name": "POHeaderSet",
+          "path": "POHeaderSet",
+          "key_fields": [
+            "EBELN"
+          ],
+          "fields": [
+            "EBELN",
+            "LIFNR",
+            "BEDAT",
+            "BSART",
+            "WAERS"
+          ]
+        },
+        "POItemSet": {
+          "name": "POItemSet",
+          "path": "POItemSet",
+          "key_fields": [
+            "EBELN",
+            "EBELP"
+          ],
+          "fields": [
+            "EBELN",
+            "EBELP",
+            "MATNR",
+            "MENGE",
+            "NETPR",
+            "WAERS"
+          ]
+        }
+      }
+    }
+  }
+}
